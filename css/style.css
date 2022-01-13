@@ -1,0 +1,41 @@
+.site-header{
+    background-color:#26272b;
+    background-clip: padding-box;
+    /* padding:20px 0 20px; */
+    color:white;
+    text-align: center;
+}
+.menu-bar{
+    background-color:#123C69;
+    background-clip: padding-box;
+    padding:20px 20px 20px;
+    color:white;
+    text-align: center;
+}
+
+.site-footer
+{
+  background-color:#26272b;
+  background-clip: padding-box;
+  padding:10px 0 10px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+
+.body-style
+{
+  padding:10px 0 0;
+  background-color:gainsboro;
+  background-clip: content-box;
+}
+
+.side-bar
+{
+  background-color:gainsboro;
+}
+
+.table-style
+{
+  background-color:white;
+}

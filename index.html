@@ -275,206 +275,209 @@ if(lspl["slots"]&&lspl["slots"]=="false"){
 
 
 <div class="container">
-	<div class="row clearfix">
-		<div class="col-md-12 column">
-			<h3>
-				Timetable creator - IIT Madras
-			</h3>
+	<div class = "site-header">
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<h3>
+					Timetable creator - IIT Madras
+				</h3>
+			</div>
 		</div>
 	</div>
-	<div class="row clearfix">
-		<div class="col-md-10 column">
-		<div class="row clearfix" id="inputrow">
-		<div class="col-md-2 column"><input type=text class="form-control" id=ccode placeholder="Course code"/></div>
-		<div class="col-md-2 column"><div class="input-group">
-			<span class="input-group-addon"><i class="glyphicon glyphicon-question-sign" data-toggle="tooltip"  id="helpicon"></i></span>
-			<input type=text class="form-control" id=cslots placeholder="Slots"/>
-		</div></div>
-		<div class="col-md-2 column"><input type=text class="form-control" id=cvenue placeholder="Venue"/></div>
-    <div class="col-md-2 column input-group picker">
-        <input type="text" placeholder="BG color" id=color value="rgba(255, 255, 0, 0.36)" class="form-control" />
-        <span class="input-group-addon"><i></i></span>
-    </div>
-		<div class="col-md-1 column"><button class="btn btn-primary" onclick="addCourse($('#ccode').val(),$('#cslots').val(),$('#cvenue').val(), $('#color').val())">Add</button></div>
-		<div class="col-md-2 column"><button class="btn btn-default togglebtn active" id=snametog onclick="toggleSlot()">Hide slot names</button></div>
-
+	<div class="clearfix">
+		<div class="col-md-12 column menu-bar">
+				<div class="row clearfix" id="inputrow">
+					<div class="col-md-2 column"><input type=text class="form-control" id=ccode placeholder="Course code"/></div>
+					<div class="col-md-2 column"><div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-question-sign" data-toggle="tooltip"  id="helpicon"></i></span>
+						<input type=text class="form-control" id=cslots placeholder="Slots"/>
+					</div></div>
+					<div class="col-md-2 column"><input type=text class="form-control" id=cvenue placeholder="Venue"/></div>
+					<div class="col-md-2 column input-group picker">
+						<input type="text" placeholder="BG color" id=color value="rgba(255, 255, 0, 0.36)" class="form-control" />
+						<span class="input-group-addon"><i></i></span>
+					</div>
+					<div class="col-md-1 column"><button class="btn btn-primary" onclick="addCourse($('#ccode').val(),$('#cslots').val(),$('#cvenue').val(), $('#color').val())">Add</button></div>
+					<div class="col-md-2 column"><button class="btn btn-default togglebtn active" id=snametog onclick="toggleSlot()">Hide slot names</button></div>
+				</div>
+			<div class="row">&nbsp;</div> 
 		</div>
-		<div class="row">&nbsp;</div> 
-		<div class="row clearfix">
 		<div class="col-md-12 column">
-			<table class="table table-bordered maintbl">
-				<thead>
+		<div class="row clearfix body-style">
+			<div class="col-md-10 column table-style">
+				<table class="table table-bordered maintbl">
+					<thead>
+						<tr>
+							<th colspan=3 class=tm2>
+								Time
+							</th>
+							<th>
+								Monday
+							</th>
+							<th>
+								Tuesday
+							</th>
+							<th>
+								Wednesday
+							</th>
+							<th>
+								Thursday
+							</th>
+							<th>
+								Friday
+							</th>
+						</tr>
+					</thead>
+					<tbody>
 					<tr>
-						<th colspan=3 class=tm2>
-							Time
-						</th>
-						<th>
-							Monday
-						</th>
-						<th>
-							Tuesday
-						</th>
-						<th>
-							Wednesday
-						</th>
-						<th>
-							Thursday
-						</th>
-						<th>
-							Friday
-						</th>
+						<td class=structtd></td>
+						<td colspan=2 class="tm">
+							8:00-<br>8:50
+						</td>
+						<td class="slot-A slot-A1"><span class="slot-name">A1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-B slot-B2"><span class="slot-name">B2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-C slot-C3"><span class="slot-name">C3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-E slot-E3"><span class="slot-name">E3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-F slot-F4"><span class="slot-name">F4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
 					</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<td class=structtd></td>
-					<td colspan=2 class="tm">
-						8:00-<br>8:50
-					</td>
-					<td class="slot-A slot-A1"><span class="slot-name">A1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-B slot-B2"><span class="slot-name">B2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-C slot-C3"><span class="slot-name">C3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-E slot-E3"><span class="slot-name">E3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-F slot-F4"><span class="slot-name">F4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-				</tr>
 
-				<tr>
-					<td class=structtd></td>
-					<td colspan=2 class="tm">
-						9:00-<br>9:50
-					</td>
-					<td class="slot-B slot-B1"><span class="slot-name">B1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-C slot-C2"><span class="slot-name">C2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-D slot-D3"><span class="slot-name">D3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-E slot-F3"><span class="slot-name">F3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-F slot-G4"><span class="slot-name">G4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-				</tr>
-
-				<tr>
-					<td class=structtd></td>
-					<td colspan=2 class="tm">
-						10:00-<br>10:50
-					</td>
-					<td class="slot-C slot-C1"><span class="slot-name">C1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-D slot-D2"><span class="slot-name">D2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-E slot-E2"><span class="slot-name">E2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-G slot-G3"><span class="slot-name">G3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-A slot-A4"><span class="slot-name">A4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-				</tr>
-
-				<tr>
-					<td class=structtd></td>
-					<td colspan=2 class="tm">
-						11:00-<br>11:50
-					</td>
-					<td class="slot-D slot-D1"><span class="slot-name">D1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-E slot-E1"><span class="slot-name">E1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-F slot-F2"><span class="slot-name">F2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-A slot-A3"><span class="slot-name">A3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-B slot-B4"><span class="slot-name">B4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-				</tr>
-
-				<tr>
-					<td class=structtd></td>
-					<td colspan=2 class=tm>11:50-<br>1:00</td>
-					<td colspan=42 style="text-align:center">Lunch</td>
-				</tr>
-				
-				<tr>
-					<td class=structtd></td>
-					<td colspan=2 class="tm">
-						1:00-<br>1:50
-					</td>
-					<td class="slot-G slot-G1"><span class="slot-name">D1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-A slot-A2"><span class="slot-name">A2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-B slot-B3"><span class="slot-name">B3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-A slot-D4"><span class="slot-name">D4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-B slot-C4"><span class="slot-name">C4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-				</tr>
-
-				<tr>
-					<td class=structtd></td>
-					<td class=tm>
-						2:00-<br>3:15
-					</td>
-
-					<td class=tm rowspan=2>
-						2:00-<br>4:45
-					</td>
-					<td class="slot-H slot-H1 slot-clash-P clashbuddy-M2"><span class="slot-name">H1 [P]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-P  slot-clash-H1 slot-clash-M2" style="display:none" rowspan=2><span class="slot-name">P [H1, M2]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-
-					<td class="slot-M slot-M1 slot-clash-Q clashbuddy-H2"><span class="slot-name">M1 [Q]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-Q  slot-clash-M1 slot-clash-H2" style="display:none" rowspan=2><span class="slot-name">Q [M1, H2]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-
-					<td class="slot-J slot-J1 slot-clash-R clashbuddy-K2"><span class="slot-name">J1 [R]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-R  slot-clash-J1 slot-clash-K2" style="display:none" rowspan=2><span class="slot-name">R [J1, K2]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-
-					<td class="slot-L slot-L1 slot-clash-S clashbuddy-J2"><span class="slot-name">L1 [S]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-S  slot-clash-L1 slot-clash-J2" style="display:none" rowspan=2><span class="slot-name">S [L1, J2]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-
-					<td class="slot-K slot-K1 slot-clash-T clashbuddy-L2"><span class="slot-name">K1 [T]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-T  slot-clash-K1 slot-clash-L2" style="display:none" rowspan=2><span class="slot-name">T [K1, L2]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-				</tr>
-				<tr>
-					<td class=structtd></td>
-					<td class=tm>
-						3:30-<br>4:45
-					</td>
-					
-					<td class="slot-M slot-M2 slot-clash-P clashbuddy-H1"><span class="slot-name">M2 [P]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-
-					<td class="slot-H slot-H2 slot-clash-Q clashbuddy-M1"><span class="slot-name">H2 [Q]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					
-					<td class="slot-K slot-K2 slot-clash-R clashbuddy-J1"><span class="slot-name">K2 [R]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					
-					<td class="slot-J slot-J2 slot-clash-S clashbuddy-L1"><span class="slot-name">J2 [S]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					
-					<td class="slot-L slot-L2 slot-clash-T clashbuddy-K1"><span class="slot-name">L2 [T]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-
-				</tr>	
-
-				<tr>
-					<td class=structtd></td>
-					<td colspan=2 class="tm">
-						5:00-<br>5:50
-					</td>
-					<td class="slot-J slot-J3"><span class="slot-name">J3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-F slot-F1"><span class="slot-name">F1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-G slot-G2"><span class="slot-name">G2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-H slot-H3"><span class="slot-name">H3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-					<td class="slot-E slot-E4"><span class="slot-name">E4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
-				</tr>
-				
-				
-				
-				</tbody>
-			</table>
-		</div>
-		</div>
-		</div>
-		<div class="col-md-2 column"><br><br><br><br>
-			<button class="btn btn-default form-control"  style="z-index:2" onclick="printable()">Printable</button>
-			<a style="z-index:2; margin-top:2px;margin-bottom:2px" class="btn form-control btn-default input-block-level" id=perma href>Permalink</a>
-			<!-- <button class="btn btn-default form-control"  style="z-index:2" onclick = "validateICS()">Export as .ics</button> -->
-			<form id = "icsForm" name = icsForm" target = "_blank" method = "POST" action = "download.php">
-			</form>
-			
-			<table class="table table-striped table-hover">
-				<thead>
 					<tr>
+						<td class=structtd></td>
+						<td colspan=2 class="tm">
+							9:00-<br>9:50
+						</td>
+						<td class="slot-B slot-B1"><span class="slot-name">B1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-C slot-C2"><span class="slot-name">C2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-D slot-D3"><span class="slot-name">D3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-E slot-F3"><span class="slot-name">F3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-F slot-G4"><span class="slot-name">G4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+					</tr>
+
+					<tr>
+						<td class=structtd></td>
+						<td colspan=2 class="tm">
+							10:00-<br>10:50
+						</td>
+						<td class="slot-C slot-C1"><span class="slot-name">C1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-D slot-D2"><span class="slot-name">D2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-E slot-E2"><span class="slot-name">E2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-G slot-G3"><span class="slot-name">G3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-A slot-A4"><span class="slot-name">A4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+					</tr>
+
+					<tr>
+						<td class=structtd></td>
+						<td colspan=2 class="tm">
+							11:00-<br>11:50
+						</td>
+						<td class="slot-D slot-D1"><span class="slot-name">D1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-E slot-E1"><span class="slot-name">E1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-F slot-F2"><span class="slot-name">F2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-A slot-A3"><span class="slot-name">A3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-B slot-B4"><span class="slot-name">B4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+					</tr>
+
+					<tr>
+						<td class=structtd></td>
+						<td colspan=2 class=tm>11:50-<br>1:00</td>
+						<td colspan=42 style="text-align:center">Lunch</td>
+					</tr>
+					
+					<tr>
+						<td class=structtd></td>
+						<td colspan=2 class="tm">
+							1:00-<br>1:50
+						</td>
+						<td class="slot-G slot-G1"><span class="slot-name">D1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-A slot-A2"><span class="slot-name">A2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-B slot-B3"><span class="slot-name">B3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-A slot-D4"><span class="slot-name">D4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-B slot-C4"><span class="slot-name">C4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+					</tr>
+
+					<tr>
+						<td class=structtd></td>
+						<td class=tm>
+							2:00-<br>3:15
+						</td>
+
+						<td class=tm rowspan=2>
+							2:00-<br>4:45
+						</td>
+						<td class="slot-H slot-H1 slot-clash-P clashbuddy-M2"><span class="slot-name">H1 [P]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-P  slot-clash-H1 slot-clash-M2" style="display:none" rowspan=2><span class="slot-name">P [H1, M2]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+
+						<td class="slot-M slot-M1 slot-clash-Q clashbuddy-H2"><span class="slot-name">M1 [Q]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-Q  slot-clash-M1 slot-clash-H2" style="display:none" rowspan=2><span class="slot-name">Q [M1, H2]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+
+						<td class="slot-J slot-J1 slot-clash-R clashbuddy-K2"><span class="slot-name">J1 [R]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-R  slot-clash-J1 slot-clash-K2" style="display:none" rowspan=2><span class="slot-name">R [J1, K2]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+
+						<td class="slot-L slot-L1 slot-clash-S clashbuddy-J2"><span class="slot-name">L1 [S]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-S  slot-clash-L1 slot-clash-J2" style="display:none" rowspan=2><span class="slot-name">S [L1, J2]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+
+						<td class="slot-K slot-K1 slot-clash-T clashbuddy-L2"><span class="slot-name">K1 [T]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-T  slot-clash-K1 slot-clash-L2" style="display:none" rowspan=2><span class="slot-name">T [K1, L2]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+					</tr>
+					<tr>
+						<td class=structtd></td>
+						<td class=tm>
+							3:30-<br>4:45
+						</td>
 						
-						<th colspan=2>
-							Course list
-						</th>
-					</tr>
-				</thead>
-				<tbody id="listb">
+						<td class="slot-M slot-M2 slot-clash-P clashbuddy-H1"><span class="slot-name">M2 [P]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
 
+						<td class="slot-H slot-H2 slot-clash-Q clashbuddy-M1"><span class="slot-name">H2 [Q]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						
+						<td class="slot-K slot-K2 slot-clash-R clashbuddy-J1"><span class="slot-name">K2 [R]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						
+						<td class="slot-J slot-J2 slot-clash-S clashbuddy-L1"><span class="slot-name">J2 [S]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						
+						<td class="slot-L slot-L2 slot-clash-T clashbuddy-K1"><span class="slot-name">L2 [T]</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+
+					</tr>	
+
+					<tr>
+						<td class=structtd></td>
+						<td colspan=2 class="tm">
+							5:00-<br>5:50
+						</td>
+						<td class="slot-J slot-J3"><span class="slot-name">J3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-F slot-F1"><span class="slot-name">F1</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-G slot-G2"><span class="slot-name">G2</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-H slot-H3"><span class="slot-name">H3</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+						<td class="slot-E slot-E4"><span class="slot-name">E4</span><div class="slot-deets"><span class="course-name"></span><div class="course-venue"></div></div></td>
+					</tr>
+					
+					
+					
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-2 column side-bar">
+				<button class="btn btn-default form-control"  style="z-index:2" onclick="printable()">Printable</button>
+				<a style="z-index:2; margin-top:2px;margin-bottom:2px" class="btn form-control btn-default input-block-level" id=perma href>Permalink</a>
+				<!-- <button class="btn btn-default form-control"  style="z-index:2" onclick = "validateICS()">Export as .ics</button> -->
+				<form id = "icsForm" name = icsForm" target = "_blank" method = "POST" action = "download.php">
+				</form>
 				
-				
-				</tbody>
-			</table>
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							
+							<th colspan=2>
+								Course list
+							</th>
+						</tr>
+					</thead>
+					<tbody id="listb">
+	
+					
+					
+					</tbody>
+				</table>
+			</div>
+		</div>
 		</div>
 		
 	</div>
@@ -487,13 +490,15 @@ if(lspl["slots"]&&lspl["slots"]=="false"){
 </body>
 
 <!-- Site footer -->
-<footer class="site-footer">
+<footer class="col-md-12 column">
 	<div class="container">
-	  	<div class="row">
-		<h4 style="text-align:center"><a href="https://krhariharan.github.io/">KR Hariharan</a></h4>
-		<p style="text-align:center">Original design by <a href="https://github.com/Manishearth">Manish Goregaokar</a></p> 
-		<p style="text-align:center">Repository for this website can be found <a href="https://github.com/krHariharan/IIT-Timetable">here</a> (forked from <a href="https://github.com/Manishearth/IIT-Timetable">here</a>)</p>
-		<p style="text-align:center">Hope you find this resource useful :)</p>
+		<div class="site-footer">
+			<div class="row">
+			<h4 style="text-align:center"><a href="https://krhariharan.github.io/">KR Hariharan</a></h4>
+			<p style="text-align:center">Original design by <a href="https://github.com/Manishearth">Manish Goregaokar</a></p> 
+			<p style="text-align:center">Repository for this website can be found <a href="https://github.com/krHariharan/IIT-Timetable">here</a> (forked from <a href="https://github.com/Manishearth/IIT-Timetable">here</a>)</p>
+			<p style="text-align:center">Hope you find this resource useful :)</p>
+			</div>
 		</div>
 	</div>		
 </footer>
