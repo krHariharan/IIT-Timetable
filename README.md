@@ -1,8 +1,11 @@
-IIT-Timetable
-=============
+IIT-Timetable - Madras Version
+==============================
 
-Running [here](http://manishearth.anapnea.net/timetable/)
+Running [here](https://krhariharan.github.io/IIT-Timetable/)
 
-([Alternate link](http://home.iitb.ac.in/~manishg/Stuff/timetable))
+Got tired of making timetables from scratch every semester. Apparently [Manish Goregaokar](https://github.com/Manishearth) felt the same when he was studying at IITB. Forked [this](https://github.com/Manishearth/IIT-Timetable) repo of his and modified the schedule in alignment with IIT Madras' timetable.
 
-Helps generate timetables given course codes and slots without having to dig through IIT Bombay's labyrinthine overlapping slot pattern
+Have some time on your hands? Here are some updates that need to be done:
+- Modify .ics xml for IITM's timetable and update the dates in the function for the live semester
+- Beautification: As you can see, the website is fairly barebones at the moment, and HTML/CSS isn't exactly my forte. If your passion is web dev, have a go at this (a beginner project?)
+- Anything else you can think of?
