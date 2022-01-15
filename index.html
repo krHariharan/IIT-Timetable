@@ -171,7 +171,7 @@ function updatePerma(){
 
 function printable(){
 	history.pushState({},"",updatePerma())
-	if(confirm("Remove colors?")){
+	if(confirm("Press ok to remove coloring. Cancel to keep coloring.")){
 		$('.used').css('background-color','white')
 	}
 	$('body').html($('.maintbl').parent().html())
